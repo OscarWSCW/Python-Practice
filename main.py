@@ -1,22 +1,37 @@
 score = 0
-print("hello")
+play = "yes "
+print("Hello")
 # Ask the user their name
 name = input("What is your name? ")
 #Greet the user and welcome them to the quiz
-print("Welcome to this quiz," ,name) 
+print("Welcome to this quiz, {}.".format(name))
+print("This quiz is about the earth.")
+#Check number of question attempts
+while True:
+ try:
+     tries = input("How many attempts do you want at each question (0-1)? ")
+     tries = int(tries)
+     break
+ except:
+    print ("That's not a number")
 
-
-print("This quiz is about the earth")
 #Ask the user a question and tell the user to answer the question
+while play == "yes":
+   
+   question_attemps = tries
+   while question_attemps > 0:
 
-answer= input("What is the largest country by population?").lower()
-if answer == "India".lower():
-    print ("Correct!") 
-    score += 1
-elif answer =="" :
-    print("Not sure?")   
-else:
-    print("Wrong!")
+    answer= input("What is the largest country by population? ").lower()
+    if answer == "India".lower():
+        print ("Correct!") 
+        score += 1
+        break
+    elif answer =="" :
+        print("Not sure?")   
+    else:
+        print("Wrong!")
+
+    question_attemps -=1
     print("The correct answer is India")
 
 answer1 = input("What is the greenest type of grass?").lower()
@@ -69,5 +84,7 @@ print ("The correct answer is 10,935 meters")
 
 
 #End the quiz
-
 print("Thank you for playing, {}!. You got {} points".format(name, score ))
+
+#Replay
+play = input("Do you want to play again?").lower()
