@@ -1,11 +1,17 @@
 score = 0
-play = "yes "
+play = "yes"
 print("Hello")
+
+
 # Ask the user their name
 name = input("What is your name? ")
+
+
 #Greet the user and welcome them to the quiz
 print("Welcome to this quiz, {}.".format(name))
 print("This quiz is about the earth.")
+
+
 #Check number of question attempts
 while True:
  try:
@@ -15,72 +21,84 @@ while True:
  except:
     print ("That's not a number")
 
+
 #Ask the user a question and tell the user to answer the question
 while play == "yes":
-   
-   question_attemps = tries
-   while question_attemps > 0:
+   question_attemps1 = tries
+   while question_attemps1 > 0:
+        answer1 = input("What is the largest country by population? ").lower()
+        if answer1 == "India".lower():
+            print ("Correct!") 
+            score += 1
+            break
+        elif answer1 =="" :
+            print("You don't know? ")   
+        else:
+            print("Wrong!")
 
-    answer= input("What is the largest country by population? ").lower()
-    if answer == "India".lower():
-        print ("Correct!") 
-        score += 1
-        break
-    elif answer =="" :
-        print("Not sure?")   
-    else:
-        print("Wrong!")
+        question_attemps1 -=1
+        print("The answer is India")
 
-    question_attemps -=1
-    print("The correct answer is India")
+   question_attemps2 = tries
+   while question_attemps2 > 0:
+        answer2 = input("What is the greenest type of grass? ").lower()
+        if answer2 == "Perennial ryegrass".lower():
+            print ("Correct!") 
+            score += 1
+            break
+        elif answer2 =="" :
+            print("You don't know? ")   
+        else:
+            print("Wrong!")
+        question_attemps2 -=1
+        print("The answer is Perennial ryegrass")
 
-answer1 = input("What is the greenest type of grass?").lower()
-if answer1 == "Perennial ryegrass".lower():
-    print ("Correct!")   
-elif answer1 =="" :
- print("Not sure?")
+   question_attemps3 = tries
+   while question_attemps3 > 0:
+        answer3= "Which country snows the most?"
+        q3a = "Canada"
+        q3b = "Iceland"
+        q3c = "Japan"
+        q3d = "Norway"
+        answer3 = input("{}\nA.{} B.{} C.{} D.{}".format(answer3, q3a, q3b, q3c, q3d)).lower()
+        if answer3 == q3c.lower() or answer3 == "c":
+            print ("Correct!")  
+            score += 1
+            break
+        elif answer2 =="" :
+            print("Not sure?") 
+        elif answer2 != q3a and answer2 != "A" and answer2 != q3b and answer2 != "B" and answer2 != q3c and answer2 != "C" and answer2 != q3d and answer2 != "D":
+            print("Wrong")
+        else:
+            print("Wrong!")
+            print ("The answer is Japan")
+        question_attemps3 -=1
 
-else:
-    print("Wrong!")
-    print("The correct answer is Perennial ryegrass")
+   question_attemps4 = tries
+   while question_attemps4 > 0:
+        answer4 = input("What is the most spoken language?").lower()
+        if answer4 == "English".lower():
+            print ("Correct!")  
+            score += 1
+            break
+        elif answer4 =="" :
+            print("Not sure?")
+        else:
+            print("Wrong!")
+            print ("The answer is English")
 
-answer2= "Which country snows the most?"
-a = "Canada"
-b = "Iceland"
-c = "Japan"
-d = "Norway"
-answer2 = input("{}\nA.{} B.{} C.{} D.{}".format(answer2, a, b, c, d)).lower()
-if answer2 == c or answer2 == "c":
-    print ("Correct!")  
-    score += 1
-elif answer2 =="" :
-     print("Not sure?") 
-elif answer2 != a and answer2 != "A" and answer2 != b and answer2 != "B" and answer2 != c and answer2 != "C" and answer2 != d and answer2 != "D":
-  print("Wrong")
-else:
-
-    print("Wrong!")
-print ("The correct answer is Japan")
-
-answer3= input("What is the most spoken language?").lower()
-if answer3 == "English".lower():
-    print ("Correct!")  
-    score += 1
-elif answer3 =="" :
- print("Not sure?")  
-else:
-    print("Wrong!")
-print ("The correct answer is English")
-
-answer4= input("How deep is the ocean in meters?").lower()
-if answer4 == "10,935 meters".lower():
-    print ("Correct!") 
-    score += 1
-elif answer4 =="" :
- print("Not sure?")   
-else:
-    print("Wrong!")
-print ("The correct answer is 10,935 meters")
+   question_attemps5 = tries
+   while question_attemps5 > 0:
+        answer5 = input("How deep is the ocean in meters?").lower()
+        if answer5 == "10,935 meters".lower():
+            print ("Correct!") 
+            score += 1
+            break
+        elif answer5 =="" :
+            print("Not sure?")  
+        else:
+            print("Wrong!")
+            print ("The answer is 10,935 meters")
 
 
 #End the quiz
