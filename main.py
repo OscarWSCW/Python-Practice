@@ -15,7 +15,7 @@ print("This quiz is about the earth.")
 #Check number of question attempts
 while True:
  try:
-     tries = input("How many attempts do you want at each question (0-1)? ")
+     tries = input("How many attempts do you want at each question (1-2)? ")  
      tries = int(tries)
      break
  except:
@@ -29,7 +29,8 @@ while play == "yes":
         answer1 = input("What is the largest country by population? ").lower()
         if answer1 == "India".lower():
             print ("Correct!") 
-            score += 1
+            score += 1 
+            print("You get one point")
             break
         elif answer1 =="" :
             print("You don't know? ")   
@@ -45,6 +46,7 @@ while play == "yes":
         if answer2 == "Perennial ryegrass".lower():
             print ("Correct!") 
             score += 1
+            print("You get one point")
             break
         elif answer2 =="" :
             print("You don't know? ")   
@@ -64,11 +66,13 @@ while play == "yes":
         if answer3 == q3c.lower() or answer3 == "c":
             print ("Correct!")  
             score += 1
+            print ("You get one point")
             break
         elif answer2 =="" :
             print("Not sure?") 
         elif answer2 != q3a and answer2 != "A" and answer2 != q3b and answer2 != "B" and answer2 != q3c and answer2 != "C" and answer2 != q3d and answer2 != "D":
             print("Wrong")
+            print ("The answer is Japan")
         else:
             print("Wrong!")
             print ("The answer is Japan")
@@ -76,10 +80,11 @@ while play == "yes":
 
    question_attemps4 = tries
    while question_attemps4 > 0:
-        answer4 = input("What is the most spoken language?").lower()
+        answer4 = input("What is the most spoken language? ").lower()
         if answer4 == "English".lower():
             print ("Correct!")  
             score += 1
+            print ("You get one point")
             break
         elif answer4 =="" :
             print("Not sure?")
@@ -89,10 +94,11 @@ while play == "yes":
 
    question_attemps5 = tries
    while question_attemps5 > 0:
-        answer5 = input("How deep is the ocean in meters?").lower()
+        answer5 = input("How deep is the ocean in meters? ").lower()
         if answer5 == "10,935 meters".lower():
             print ("Correct!") 
             score += 1
+            print ("You get one point")
             break
         elif answer5 =="" :
             print("Not sure?")  
@@ -100,9 +106,8 @@ while play == "yes":
             print("Wrong!")
             print ("The answer is 10,935 meters")
 
+            #End the quiz
+            print("Thank you for playing, {}!. You got {} points".format(name, score ))
 
-#End the quiz
-print("Thank you for playing, {}!. You got {} points".format(name, score ))
-
-#Replay
-play = input("Do you want to play again?").lower()
+            #Replay
+            play = input("Do you want to play again? ").lower()
