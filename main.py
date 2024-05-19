@@ -1,10 +1,16 @@
 score = 0
 play = "yes"
 print("Hello")
+import random
 
-
+question_format = "{}\nA. {} B.{} C.{} D.{}"
+good_comments = ["Way to go!", "Keep it up!", "Fantastic!"]
+bad_comments = ["Keep trying!", "Maybe next time", "Don't give up"]
+Questions = [
+             ]
 # Ask the user their name
 name = input("What is your name? ")
+
 
 
 #Greet the user and welcome them to the quiz
@@ -91,6 +97,7 @@ while play == "yes":
         else:
             print("Wrong!")
             print ("The answer is English")
+            question_attemps4 -=1
 
    question_attemps5 = tries
    while question_attemps5 > 0:
@@ -105,9 +112,12 @@ while play == "yes":
         else:
             print("Wrong!")
             print ("The answer is 10,935 meters")
+        question_attemps5 -=1
+    
 
             #End the quiz
-            print("Thank you for playing, {}!. You got {} points".format(name, score ))
+        print("Thank you for playing, {}!. You got {} points".format(name, score ))
 
             #Replay
-            play = input("Do you want to play again? ").lower()
+
+        play = input("Do you want to play again? ").lower()
