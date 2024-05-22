@@ -49,6 +49,8 @@ if answer == OPTIONS[0][ANSWERS[0]] or answer == SHORT_OPTIONS[ANSWERS[0]]:
         elif answer1 =="" :
             print("You don't know? ")  
         elif answer in SHORT_OPTIONS or answer in OPTIONS[0]:
+            print("wrong")
+            print(random.choice)
         else:
              print("That wasn't an option")
         question_attemps1 -=1
